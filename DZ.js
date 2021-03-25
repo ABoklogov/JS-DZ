@@ -171,16 +171,19 @@
 // Задание
 // Напиши функцию filterArray(numbers, value), которая принимает массив чисел (параметр numbers) и возвращает новый массив, в котором будут только те элементы массива numbers, которые больше чем значение параметра value (число).
 // function filterArray(numbers, value) {
-//   // Пиши код ниже этой строки
-//   const newArray = [];
-// for (let i = 0; i <= numbers.length; i += 1) {
-//     if (numbers[i] > value) {
-//       newArray.push(numbers[i]);
+// //   // Пиши код ниже этой строки
+// const newArray = [];
+  
+//     for (let i = 0; i <= numbers.length; i += 1) {
+//         if (numbers[i] > value) {
+//         newArray.push(numbers[i]);
+//         }
 //     }
-//   }
+  
 // return newArray;
 //   // Пиши код выше этой строки
 // }
+
 // console.log(filterArray([12,24,8,41,76], 20));
 
 // 24/2
@@ -195,3 +198,25 @@
 // }
 
 // 25/2
+// Задание
+// Общими элементами массивов называют те элементы, которые присутствуют во всех массивах.
+// Например, в двух массивах [1, 3, 5] и [0, 8, 5, 3] общими будут числа 3 и 5, т.к. они присутствуют в обоих исходных массивах. А числа 0, 1 и 8 присутствуют только в одном из массивов.
+// Напиши функцию getCommonElements(array1, array2) которая получает два массива произвольной длины в параметры array1 и array2, и возвращает новый массив, состоящий из тех элементов, которые присутствуют в обоих исходных массивах.
+// function getCommonElements(array1, array2) {
+//   // Пиши код ниже этой строки
+//   const newArray = [];
+//     for (let i = 0; i <= array1.length; i += 1) {
+//         if (array2.includes(array1[i])) {
+//         newArray.push(array1[i]);
+//         }  
+//     }
+//     return newArray;
+//     //  console.log(newArray);
+//   // Пиши код выше этой строки
+// }
+// getCommonElements([1, 2, 3], [2, 1, 17, 19]) //возвращает [1, 2]
+
+// 26 / 2
+// Задание
+// Выполни рефакторинг кода функции calculateTotalPrice(order) заменив цикл for на for...of.
+

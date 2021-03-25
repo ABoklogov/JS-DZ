@@ -89,3 +89,109 @@
 //   }
 //     // Пиши код выше этой строки
 // }
+
+
+// 17/2
+// Задание
+// Дополни цикл for так, чтобы он логировал все целые числа в диапазоне от start до end включительно.
+// const start = 3;
+// const end = 7;
+// for (let i = start; i <= end; i += 1) {
+//   //   Дополни эту строку
+//   console.log(i);
+// }
+
+// 18/2
+// Задание
+// Напиши функцию calculateTotal(number), которая принимает целое число (параметр number) и возвращает сумму всех целых чисел от единицы и до этого числа. Например, если number равно 3, то сумма это 1 + 2 + 3, то есть 6.
+// function calculateTotal(number) {
+// //   писать код ниже
+//   let total = 0; 
+//   for (let i = 1; i <= number; i += 1) {
+//    total += i;
+//   }
+// return total;
+//   // console.log(total);
+// //   писать код выше
+// }
+//   console.log(calculateTotal(3));
+
+// 19/2
+// Задание
+// Дополни код цикла for так, чтобы он последовательно логировал все элементы массива fruits.
+// const fruits = ["яблоко", "слива", "груша", "апельсин"];
+// for (let i = 0; i < fruits.length; i += 1) {  //   писать код 
+//   const fruit = fruits[i]; //   писать код
+//   console.log(fruit);
+// }
+
+// 20/2
+// Задание
+// Напиши функцию calculateTotalPrice(order), которая принимает один параметр order - массив чисел, и рассчитывает общую сумму его элементов. Общая сумма элементов должна сохраняться в переменной total, которая возвращается, как результат работы функции.
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   // Пиши код ниже этой строки
+// for (let i = 0; i < order.length; i += 1) {
+//    total += order[i];
+//   }
+//   // Пиши код выше этой строки
+//   return total;
+// }
+// console.log(calculateTotalPrice([2,2,1]));
+
+// 21/2
+// Задание
+// Напиши фукцнию findLongestWord(string) которая принимает произвольную строку состоящую только из слов разделённых пробелом (параметр string) и возвращает самое длинное слово в этой строке.
+// function findLongestWord(string) {
+// let array = string.split(" ");
+// let longest = '';
+//   for (let i = 0; i < array.length; i += 1) {
+//     if (longest.length < array[i].length) {
+//     longest = array[i]; 
+//     }
+//   }
+//   return longest;
+// }
+
+// 22/2
+// Задание
+// Дополни код функции createArrayOfNumbers(min, max) так, чтобы она возвращала массив всех целых чисел от значения min до max.
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
+//   // Пиши код ниже этой строки
+//   for (let i = min; i <= max; i += 1) {
+//   numbers.push(i);
+//   }
+//   // Пиши код выше этой строки
+//   return numbers;
+// }
+// console.log(createArrayOfNumbers(3, 7));
+
+// 23/2 
+// Задание
+// Напиши функцию filterArray(numbers, value), которая принимает массив чисел (параметр numbers) и возвращает новый массив, в котором будут только те элементы массива numbers, которые больше чем значение параметра value (число).
+// function filterArray(numbers, value) {
+//   // Пиши код ниже этой строки
+//   const newArray = [];
+// for (let i = 0; i <= numbers.length; i += 1) {
+//     if (numbers[i] > value) {
+//       newArray.push(numbers[i]);
+//     }
+//   }
+// return newArray;
+//   // Пиши код выше этой строки
+// }
+// console.log(filterArray([12,24,8,41,76], 20));
+
+// 24/2
+// Задание
+// Функция checkFruit(fruit) принимает строку с названием фрукта (параметр fruit), и проверяет есть ли такой фрукт в массиве fruits.
+// Дополни код функции так, что если:
+// фрукт есть в массиве, то функция возвращает true;
+// фрукта нет в массиве, то функция возвращает false.
+// function checkFruit(fruit) {
+//   const fruits = ['яблоко', 'слива', 'груша', 'апельсин'];
+//   return fruits.includes(fruit); // Дополни эту строку
+// }
+
+// 25/2

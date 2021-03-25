@@ -159,10 +159,10 @@
 // function createArrayOfNumbers(min, max) {
 //   const numbers = [];
 //   // Пиши код ниже этой строки
-//   for (let i = min; i <= max; i += 1) {
-//   numbers.push(i);
-//   }
-//   // Пиши код выше этой строки
+//     for (let i = min; i <= max; i += 1) {
+//     numbers.push(i);
+//     }
+//     // Пиши код выше этой строки
 //   return numbers;
 // }
 // console.log(createArrayOfNumbers(3, 7));
@@ -219,4 +219,109 @@
 // 26 / 2
 // Задание
 // Выполни рефакторинг кода функции calculateTotalPrice(order) заменив цикл for на for...of.
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   // Пиши код ниже этой строки
+//     for (const ord of order) {
+//     //   console.log(ord);
+//     total += ord;
+//     }
+//   // Пиши код выше этой строки
+//     return total;
+// }
+// calculateTotalPrice([164, 48, 291]) // возвращает 503.
 
+// 27 / 2
+// Задание
+// Выполни рефакторинг функции filterArray(numbers, value) заменив цикл for на for...of.
+// function filterArray(numbers, value) {
+//   // Пиши код ниже этой строки
+//   const filteredNumbers = [];
+//     for (const number of numbers) {
+//         if (number > value) {
+//         filteredNumbers.push(number);
+//         }
+//     }
+//   return filteredNumbers;
+//   // Пиши код выше этой строки
+// }
+//  filterArray([12, 24, 8, 41, 76], 38) // возвращает [41, 76].
+
+// 28 / 2
+// Задание
+// Дополни выражения остатка от деления так, чтобы код проходил тесты.
+// const a = 3 % 3;
+// const b = 4 % 3;
+// const c = 11 % 8;
+// const d = 12 % 7;
+// const e = 8 % 6;
+
+// 29 / 2
+// Задание
+// Напиши функцию getEvenNumbers(start, end) которая возвращает массив всех чётных чисел от start до end. Чётным считается число которое делится на 2 без остатка.
+// function getEvenNumbers(start, end) {
+//     // Пиши код ниже этой строки
+//     const array = [];
+//     for (let i = start; i <= end; i += 1) {
+//         if (i % 2 === 0) {
+//             array.push(i);
+//         }
+//     }
+//     return array;
+//     // Пиши код выше этой строки
+// }
+// getEvenNumbers(3, 11) // возвращает [4, 6, 8, 10].
+// getEvenNumbers(6, 12) // возвращает [6, 8, 10, 12]
+
+// 30 / 2
+// Задание
+// Дополни код так, чтобы в переменную number записывалось первое число от start до end, которое делится на 5 без остатка.
+// const start = 6;
+// const end = 27;
+// let number;
+// for (let i = start; i < end; i += 1) {
+//   if (i % 5 === 0) {
+//     number = i;
+//     break;
+//   }
+// }
+
+// 31 / 2
+// Задание
+// Выполни рефакторинг функции findNumber(start, end, divisor) так, чтобы она:
+// возвращала первое число от start до end, которое делится на divisor без остатка;
+// не использовала оператор break;
+// не использовала переменную number.
+// function findNumber(start, end, divisor) {
+//   // Пиши код ниже этой строки
+//   for (let i = start; i < end; i += 1) {
+//     if (i % divisor === 0) {
+//       return i;
+//     }
+//   }
+//   // Пиши код выше этой строки
+// }
+
+// 32 / 2
+// Задание
+// Напиши функцию includes(array, value), которая делает тоже самое, что и метод массива массив.includes(значение) - проверяет, есть ли в массиве array значение value, возвращая true если есть и false в противном случае.
+// При выполнении этой задачи в теле функции includes() нельзя использовать метод массив.includes(значение).
+// function includes(array, value) {
+//   // Пиши код ниже этой строки
+//     for (const number of array) {
+//         if (number === value) {
+//             // console.log(true);
+//            return true;
+//             // break;
+//         } 
+//     }
+//     // console.log(false);
+//     return false;  
+//   // Пиши код выше этой строки
+// }
+// includes([1, 2, 3, 4, 5], 3) //возвращает true.
+// includes([1, 2, 3, 4, 5], 17) //возвращает false.
+// includes(['Земля', 'Марс', 'Венера', 'Юпитер', 'Сатурн'], 'Юпитер') //возвращает true.
+// includes(['Земля', 'Марс', 'Венера', 'Юпитер', 'Сатурн'], 'Уран') //возвращает false.
+// includes(['яблоко', 'слива', 'груша', 'апельсин'], 'слива')// возвращает true.
+// includes(['яблоко', 'слива', 'груша', 'апельсин'], 'киви') //возвращает false.

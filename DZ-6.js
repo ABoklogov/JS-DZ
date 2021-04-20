@@ -181,78 +181,78 @@
 // Задание
 // Дополни функцию getFriends(users) так, чтобы она возвращала массив друзей всех пользователей (свойство friends). У нескольких пользователей могут быть одинаковые друзья, сделай так чтобы возвращаемый массив не содержал повторений.
 
-// const users = [
-//   {
-//     name: 'Moore Hensley',
-//     email: 'moorehensley@indexia.com',
-//     eyeColor: 'blue',
-//     friends: ['Sharron Pace'],
-//     isActive: false,
-//     balance: 2811,
-//     gender: 'male',
-//     age: 37
-//   },
-//   {
-//     name: 'Sharlene Bush',
-//     email: 'sharlenebush@tubesys.com',
-//     eyeColor: 'blue',
-//     friends: ['Briana Decker', 'Sharron Pace'],
-//     isActive: true,
-//     balance: 3821,
-//     gender: 'female',
-//     age: 34
-//   },
-//   {
-//     name: 'Ross Vazquez',
-//     email: 'rossvazquez@xinware.com',
-//     eyeColor: 'green',
-//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
-//     isActive: false,
-//     balance: 3793,
-//     gender: 'male',
-//     age: 24
-//   },
-//   {
-//     name: 'Elma Head',
-//     email: 'elmahead@omatom.com',
-//     eyeColor: 'green',
-//     friends: ['Goldie Gentry', 'Aisha Tran'],
-//     isActive: true,
-//     balance: 2278,
-//     gender: 'female',
-//     age: 21
-//   },
-//   {
-//     name: 'Carey Barr',
-//     email: 'careybarr@nurali.com',
-//     eyeColor: 'blue',
-//     friends: ['Jordan Sampson', 'Eddie Strong'],
-//     isActive: true,
-//     balance: 3951,
-//     gender: 'male',
-//     age: 27
-//   },
-//   {
-//     name: 'Blackburn Dotson',
-//     email: 'blackburndotson@furnigeer.com',
-//     eyeColor: 'brown',
-//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
-//     isActive: false,
-//     balance: 1498,
-//     gender: 'male',
-//     age: 38
-//   },
-//   {
-//     name: 'Sheree Anthony',
-//     email: 'shereeanthony@kog.com',
-//     eyeColor: 'brown',
-//     friends: ['Goldie Gentry', 'Briana Decker'],
-//     isActive: true,
-//     balance: 2764,
-//     gender: 'female',
-//     age: 39
-//   }
-// ]
+const users = [
+  {
+    name: 'Moore Hensley',
+    email: 'moorehensley@indexia.com',
+    eyeColor: 'blue',
+    friends: ['Sharron Pace'],
+    isActive: false,
+    balance: 2811,
+    gender: 'male',
+    age: 37
+  },
+  {
+    name: 'Sharlene Bush',
+    email: 'sharlenebush@tubesys.com',
+    eyeColor: 'blue',
+    friends: ['Briana Decker', 'Sharron Pace'],
+    isActive: true,
+    balance: 3821,
+    gender: 'female',
+    age: 34
+  },
+  {
+    name: 'Ross Vazquez',
+    email: 'rossvazquez@xinware.com',
+    eyeColor: 'green',
+    friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+    isActive: false,
+    balance: 3793,
+    gender: 'male',
+    age: 24
+  },
+  {
+    name: 'Elma Head',
+    email: 'elmahead@omatom.com',
+    eyeColor: 'green',
+    friends: ['Goldie Gentry', 'Aisha Tran'],
+    isActive: true,
+    balance: 2278,
+    gender: 'female',
+    age: 21
+  },
+  {
+    name: 'Carey Barr',
+    email: 'careybarr@nurali.com',
+    eyeColor: 'blue',
+    friends: ['Jordan Sampson', 'Eddie Strong'],
+    isActive: true,
+    balance: 3951,
+    gender: 'male',
+    age: 27
+  },
+  {
+    name: 'Blackburn Dotson',
+    email: 'blackburndotson@furnigeer.com',
+    eyeColor: 'brown',
+    friends: ['Jacklyn Lucas', 'Linda Chapman'],
+    isActive: false,
+    balance: 1498,
+    gender: 'male',
+    age: 38
+  },
+  {
+    name: 'Sheree Anthony',
+    email: 'shereeanthony@kog.com',
+    eyeColor: 'brown',
+    friends: ['Goldie Gentry', 'Briana Decker'],
+    isActive: true,
+    balance: 2764,
+    gender: 'female',
+    age: 39
+  }
+]
 
 // // Пиши код ниже этой строки
 // const getFriends = (users) => {
@@ -291,3 +291,69 @@
 // // Пиши код выше этой строки
 
 // console.log(getTotalFriendCount(users));
+
+// 39 - 6
+// Задание
+// Дополни функцию sortByDescendingFriendCount(users) так, чтобы она возвращала массив пользователей отсортированный по убыванию количества их друзей (свойство friends).
+
+// const sortByDescendingFriendCount = users => {
+//   return [...users].sort((a, b) => b.friends.length - a.friends.length) 
+// };
+
+// console.log(sortByDescendingFriendCount(users));
+
+// 41 - 6
+// Задание
+// Дополни код так, чтобы в переменной names получился массив имён авторов в алфавитном порядке, рейтинг книг которых больше значения переменной MIN_BOOK_RATING.
+// const books = [
+//   { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+//   { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+//   { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+//   { title: 'Красна как кровь', author: 'Ли Танит', rating: 8.14 },
+//   { title: 'Сны В Ведьмином Доме', author: 'Говард Лавкрафт', rating: 8.67 }
+// ];
+// const MIN_BOOK_RATING = 8;
+// // Пиши код ниже этой строки
+
+// const names = [...books]
+//     .filter(book => book.rating > MIN_BOOK_RATING)
+//     .map(name => name.author)
+//     .sort((a, b) => a.localeCompare(b))
+// console.log(names);
+
+// 42 - 6
+// Задание
+// Дополни функцию getNamesSortedByFriendCount(users) так, чтобы она возвращала массив имён пользователей отсортированный по возрастанию количества их друзей (свойство friends).
+// const getNamesSortedByFriendCount = users => {
+//     return [...users]
+//         .sort((a, b) => a.friends.length - b.friends.length)
+//         .map(element => element.name)
+// };
+
+// console.log(getNamesSortedByFriendCount(users));
+
+// 43 - 6
+// Задание
+// Дополни функцию getSortedFriends(users) так, чтобы она возвращала массив уникальных имён друзей (свойство friends) отсортированный по алфавиту .
+
+// const getSortedFriends = users => {
+//     return users
+//         .flatMap(user => user.friends)
+//         .filter((friend, index, array) => array.indexOf(friend) === index)
+//         .sort((a, b) => a.localeCompare(b))
+// };
+
+// console.log(getSortedFriends(users));
+
+// 44 - 6
+// Задание
+// Дополни функцию getTotalBalanceByGender(users, gender) так, чтобы она возвращала общий баланс пользователей (свойство balance), пол которых (свойство gender) совпадает со значением параметра gender.
+
+// const getTotalBalanceByGender = (users, gender) => {
+//     return users
+//         .filter(user => user.gender === gender)
+//         .reduce((acc, total) => acc + total.balance, 0)
+    
+// };
+
+// console.log(getTotalBalanceByGender(users, 'female'));

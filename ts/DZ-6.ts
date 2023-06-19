@@ -335,17 +335,34 @@ const users: User[] = [
 // 39 - 6
 // Задание
 // Дополни функцию sortByDescendingFriendCount(users) так, чтобы она возвращала массив пользователей отсортированный по убыванию количества их друзей (свойство friends).
+// interface User {
+//   readonly name: string;
+//   readonly email: string;
+//   readonly eyeColor: ('blue' | 'green' | 'brown');
+//   readonly friends: string[];
+//   readonly isActive: boolean;
+//   readonly balance: number;
+//   readonly gender: ('male' | 'female');
+//   readonly age: number;
+// };
+// type SortUsers = (users: User[]) => User[];
 
-const sortByDescendingFriendCount = users => {
-  return [...users].sort((a, b) => b.friends.length - a.friends.length)
-};
+// const sortByDescendingFriendCount: SortUsers = users => {
+//   return [...users].sort((a, b) => b.friends.length - a.friends.length)
+// };
 
-console.log(sortByDescendingFriendCount(users));
+// console.log(sortByDescendingFriendCount(users));
 
 // 41 - 6
 // Задание
 // Дополни код так, чтобы в переменной names получился массив имён авторов в алфавитном порядке, рейтинг книг которых больше значения переменной MIN_BOOK_RATING.
-// const books = [
+// interface Book {
+//   title: string;
+//   author: string;
+//   rating: number;
+// };
+
+// const books: Book[] = [
 //   { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
 //   { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
 //   { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
@@ -356,18 +373,30 @@ console.log(sortByDescendingFriendCount(users));
 // // Пиши код ниже этой строки
 
 // const names = [...books]
-//     .filter(book => book.rating > MIN_BOOK_RATING)
-//     .map(name => name.author)
-//     .sort((a, b) => a.localeCompare(b))
+//   .filter(book => book.rating > MIN_BOOK_RATING)
+//   .map(name => name.author)
+//   .sort((a, b) => a.localeCompare(b))
 // console.log(names);
 
 // 42 - 6
 // Задание
 // Дополни функцию getNamesSortedByFriendCount(users) так, чтобы она возвращала массив имён пользователей отсортированный по возрастанию количества их друзей (свойство friends).
-// const getNamesSortedByFriendCount = users => {
-//     return [...users]
-//         .sort((a, b) => a.friends.length - b.friends.length)
-//         .map(element => element.name)
+// interface User {
+//   readonly name: string;
+//   readonly email: string;
+//   readonly eyeColor: ('blue' | 'green' | 'brown');
+//   readonly friends: string[];
+//   readonly isActive: boolean;
+//   readonly balance: number;
+//   readonly gender: ('male' | 'female');
+//   readonly age: number;
+// };
+// type NamesSorted = (users: User[]) => string[];
+
+// const getNamesSortedByFriendCount: NamesSorted = users => {
+//   return [...users]
+//     .sort((a, b) => a.friends.length - b.friends.length)
+//     .map(element => element.name)
 // };
 
 // console.log(getNamesSortedByFriendCount(users));
@@ -375,12 +404,23 @@ console.log(sortByDescendingFriendCount(users));
 // 43 - 6
 // Задание
 // Дополни функцию getSortedFriends(users) так, чтобы она возвращала массив уникальных имён друзей (свойство friends) отсортированный по алфавиту .
+// interface User {
+//   readonly name: string;
+//   readonly email: string;
+//   readonly eyeColor: ('blue' | 'green' | 'brown');
+//   readonly friends: string[];
+//   readonly isActive: boolean;
+//   readonly balance: number;
+//   readonly gender: ('male' | 'female');
+//   readonly age: number;
+// };
+// type SortedFriends = (users: User[]) => string[];
 
-// const getSortedFriends = users => {
-//     return users
-//         .flatMap(user => user.friends)
-//         .filter((friend, index, array) => array.indexOf(friend) === index)
-//         .sort((a, b) => a.localeCompare(b))
+// const getSortedFriends: SortedFriends = users => {
+//   return users
+//     .flatMap(user => user.friends)
+//     .filter((friend, index, array) => array.indexOf(friend) === index)
+//     .sort((a, b) => a.localeCompare(b))
 // };
 
 // console.log(getSortedFriends(users));
@@ -388,14 +428,24 @@ console.log(sortByDescendingFriendCount(users));
 // 44 - 6
 // Задание
 // Дополни функцию getTotalBalanceByGender(users, gender) так, чтобы она возвращала общий баланс пользователей (свойство balance), пол которых (свойство gender) совпадает со значением параметра gender.
+// interface User {
+//   readonly name: string;
+//   readonly email: string;
+//   readonly eyeColor: ('blue' | 'green' | 'brown');
+//   readonly friends: string[];
+//   readonly isActive: boolean;
+//   readonly balance: number;
+//   readonly gender: ('male' | 'female');
+//   readonly age: number;
+// };
+// type TotalBalance = (users: User[], gender: String) => number;
 
-// const getTotalBalanceByGender = (users, gender) => {
-//     return users
-//         .filter(user => user.gender === gender)
-//         .reduce((acc, total) => acc + total.balance, 0)
-
+// const getTotalBalanceByGender: TotalBalance = (users, gender) => {
+//   return users
+//     .filter(user => user.gender === gender)
+//     .reduce((acc, total) => acc + total.balance, 0)
 // };
 
 // console.log(getTotalBalanceByGender(users, 'female'));
 
-export { }
+// export { }
